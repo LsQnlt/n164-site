@@ -11,8 +11,37 @@ collections:
     label: "Films"
     folder: "_films"
     create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Catégorie", name: "category", widget: "select", options: ["documentaire", "atelier", "film-sur-mesure", "podcast", "expo"] }
+      - { label: "Lien vidéo", name: "video_url", widget: "string", required: false }
       - { label: "Description", name: "body", widget: "markdown" }
+
+  - name: "membres"
+    label: "Membres"
+    folder: "_membres"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nom", name: "title", widget: "string" }
+      - { label: "Photo", name: "photo", widget: "image" }
+      - { label: "Bio", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "about"
+        label: "À propos"
+        file: "_data/about.yml"
+        fields:
+          - { label: "Texte d'introduction", name: "intro", widget: "markdown" }
+      - name: "contact"
+        label: "Contact"
+        file: "_data/contact.yml"
+        fields:
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Instagram", name: "instagram", widget: "string", required: false }
+          - { label: "Facebook", name: "facebook", widget: "string", required: false }
+          - { label: "Vimeo", name: "vimeo", widget: "string", required: false }
