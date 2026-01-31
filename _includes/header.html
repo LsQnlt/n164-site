@@ -1,0 +1,20 @@
+<header class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 py-4 bg-gradient-to-b from-neutral-950/95 to-transparent backdrop-blur-sm">
+  <a href="#" class="font-display text-2xl font-extrabold tracking-wider">N164</a>
+  <nav class="header__nav hidden md:flex gap-8">
+    <a href="#films" class="text-sm uppercase tracking-widest opacity-70 hover:opacity-100 transition-opacity">Nos films</a>
+    <a href="#about" class="text-sm uppercase tracking-widest opacity-70 hover:opacity-100 transition-opacity">À propos</a>
+    <a href="#contact" class="text-sm uppercase tracking-widest opacity-70 hover:opacity-100 transition-opacity">Contact</a>
+  </nav>
+  <button class="header__menu-toggle md:hidden flex flex-col gap-1 p-2">
+    <span class="w-6 h-0.5 bg-neutral-100"></span>
+    <span class="w-6 h-0.5 bg-neutral-100"></span>
+    <span class="w-6 h-0.5 bg-neutral-100"></span>
+  </button>
+</header>
+
+<!-- Mobile nav -->
+<nav class="header__nav-mobile fixed inset-0 bg-neutral-950 z-40 flex flex-col justify-center items-center gap-8 opacity-0 invisible transition-opacity duration-300 md:hidden">
+  <a href="#films" class="text-2xl uppercase tracking-widest">Nos films</a>
+  <a href="#about" class="text-2xl uppercase tracking-widest">À propos</a>
+  <a href="#contact" class="text-2xl uppercase tracking-widest">Contact</a>
+</nav>

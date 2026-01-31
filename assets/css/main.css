@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+.films__filter.active {
+  @apply bg-neutral-100 text-neutral-950 border-neutral-100;
+}
