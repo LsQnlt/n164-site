@@ -1,0 +1,17 @@
+{
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "useTabs": false,
+  "printWidth": 100,
+  "htmlWhitespaceSensitivity": "ignore",
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "liquid-html"
+      }
+    }
+  ],
+  "plugins": ["@shopify/prettier-plugin-liquid"]
+}

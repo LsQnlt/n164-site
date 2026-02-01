@@ -15,7 +15,12 @@ collections:
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "Catégorie", name: "category", widget: "select", options: ["documentaire", "atelier", "film-sur-mesure", "podcast", "expo"] }
+      - {
+          label: "Catégorie",
+          name: "category",
+          widget: "select",
+          options: ["documentaire", "atelier", "film-sur-mesure", "podcast", "expo"],
+        }
       - { label: "Lien vidéo", name: "video_url", widget: "string", required: false }
       - { label: "Description", name: "body", widget: "markdown" }
 

@@ -1,0 +1,42 @@
+{
+  // Associer les fichiers HTML à Liquid pour la coloration syntaxique
+  "files.associations": {
+    "*.html": "liquid"
+  },
+
+  // Tailwind IntelliSense - inclure les fichiers Liquid
+  "tailwindCSS.includeLanguages": {
+    "liquid": "html"
+  },
+  "tailwindCSS.emmetCompletions": true,
+
+  // Prettier comme formateur par défaut
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
+  // Formateurs spécifiques par langage
+  "[liquid]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.formatOnSave": true
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Exclure les dossiers générés de la recherche
+  "files.exclude": {
+    "_site": true,
+    ".jekyll-cache": true,
+    "node_modules": true
+  },
+
+  // Ruby LSP
+  "rubyLsp.formatter": "rubocop",
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  }
+}

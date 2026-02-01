@@ -1,37 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title | default: site.title }}</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/css/output.css' | relative_url }}">
-</head>
-<body class="bg-neutral-950 text-neutral-100 font-mono overflow-x-hidden">
-  {% include header.html %}
-  
-  <main>
-    {{ content }}
-  </main>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="{{ '/assets/css/output.css' | relative_url }}">
+  </head>
+  <body class="bg-neutral-950 text-neutral-100 font-mono overflow-x-hidden">
+    {% include header.html %}
 
-  <div id="film-panel" class="fixed top-0 right-0 w-full max-w-xl h-screen bg-neutral-900 z-[201] translate-x-full transition-transform duration-500 ease-out overflow-y-auto">
-    <button class="film-panel__close absolute top-4 right-4 w-12 h-12 text-3xl flex items-center justify-center bg-neutral-950 rounded-full hover:bg-neutral-100 hover:text-neutral-950 transition-colors z-10">&times;</button>
-    <div class="p-8 pt-20">
-      <div class="mb-8">
-        <img class="film-panel__image w-full aspect-video object-cover" src="" alt="">
-        <div class="film-panel__video"></div>
-      </div>
-      <div>
-        <span class="film-panel__category inline-block text-xs uppercase tracking-widest text-neutral-500 mb-2 px-3 py-1 border border-neutral-800"></span>
-        <h2 class="film-panel__title font-display text-3xl font-bold mb-6"></h2>
-        <div class="film-panel__description text-neutral-400 leading-relaxed"></div>
+    <main>
+      {{ content }}
+    </main>
+
+    <div
+      id="film-panel"
+      class="fixed top-0 right-0 w-full max-w-xl h-screen bg-neutral-900 z-[201] translate-x-full transition-transform duration-500 ease-out overflow-y-auto"
+    >
+      <button class="film-panel__close absolute top-4 right-4 w-12 h-12 text-3xl flex items-center justify-center bg-neutral-950 rounded-full hover:bg-neutral-100 hover:text-neutral-950 transition-colors z-10">
+        &times;
+      </button>
+      <div class="p-8 pt-20">
+        <div class="mb-8">
+          <img class="film-panel__image w-full aspect-video object-cover" src="" alt="">
+          <div class="film-panel__video"></div>
+        </div>
+        <div>
+          <span
+            class="film-panel__category inline-block text-xs uppercase tracking-widest text-neutral-500 mb-2 px-3 py-1 border border-neutral-800"
+          ></span>
+          <h2 class="film-panel__title font-display text-3xl font-bold mb-6"></h2>
+          <div class="film-panel__description text-neutral-400 leading-relaxed"></div>
+        </div>
       </div>
     </div>
-  </div>
-  <div id="panel-overlay" class="fixed inset-0 bg-black/70 z-[200] opacity-0 invisible transition-opacity duration-300"></div>
+    <div
+      id="panel-overlay"
+      class="fixed inset-0 bg-black/70 z-[200] opacity-0 invisible transition-opacity duration-300"
+    ></div>
 
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-</body>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  </body>
 </html>

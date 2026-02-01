@@ -1,0 +1,24 @@
+require:
+  - rubocop-performance
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.2
+  Exclude:
+    - "_site/**/*"
+    - "vendor/**/*"
+    - "node_modules/**/*"
+    - "Gemfile.lock"
+
+# Jekyll génère peu de Ruby custom, config légère
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
