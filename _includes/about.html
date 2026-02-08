@@ -1,4 +1,4 @@
-<section class="px-6 py-24 md:py-32 bg-neutral-900" id="about">
+<section class="reveal px-6 py-24 md:py-32 bg-neutral-900" id="about">
   <div class="max-w-3xl mb-16">
     <h2 class="font-display text-4xl md:text-5xl font-bold mb-8">À propos</h2>
     {% if site.data.about.intro %}
@@ -14,7 +14,7 @@
 
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
     {% for membre in site.membres %}
-      <div class="text-center">
+      <div class="reveal-child text-center">
         <div class="w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-neutral-800">
           <img
             src="{{ membre.photo | relative_url }}"

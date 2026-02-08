@@ -3,6 +3,12 @@ backend:
   repo: LsQnlt/n164-site
   branch: main
 
+# config for local proxy
+# backend:
+# name: proxy
+# proxy_url: http://localhost:8081/api/v1
+# then 'npx decap-server'
+
 media_folder: "assets/images"
 public_folder: "/assets/images"
 
@@ -49,4 +55,4 @@ collections:
           - { label: "Email", name: "email", widget: "string" }
           - { label: "Instagram", name: "instagram", widget: "string", required: false }
           - { label: "Facebook", name: "facebook", widget: "string", required: false }
-          - { label: "Soundcloud", name: "vimeo", widget: "string", required: false }
+          - { label: "Soundcloud", name: "soundcloud", widget: "string", required: false }

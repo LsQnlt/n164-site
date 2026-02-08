@@ -1,9 +1,9 @@
-<section id="films" class="w-full">
+<section id="films" class="reveal w-full">
   <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
     {% for film in site.films %}
       <a
         href="#"
-        class="film-card group relative aspect-video overflow-hidden"
+        class="reveal-child film-card group relative aspect-video overflow-hidden"
         data-film="{{ film.title | slugify }}"
       >
         <img
