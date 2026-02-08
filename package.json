@@ -4,7 +4,6 @@
   "description": "Site vitrine du collectif N164",
   "main": "index.js",
   "scripts": {
-    "build:css": "npx @tailwindcss/cli -i ./assets/css/main.css -o ./assets/css/output.css --minify",
     "format": "prettier --write \"**/*.{html,css,js,json,md,yml}\"",
     "format:check": "prettier --check \"**/*.{html,css,js,json,md,yml}\""
   },
@@ -21,11 +20,7 @@
   },
   "homepage": "https://github.com/LsQnlt/n164-site#readme",
   "devDependencies": {
-    "tailwindcss": "^4.1.18",
     "prettier": "^3.2.0",
     "@shopify/prettier-plugin-liquid": "^1.4.0"
-  },
-  "dependencies": {
-    "@tailwindcss/cli": "^4.1.18"
   }
 }

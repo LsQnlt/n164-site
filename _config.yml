@@ -32,6 +32,11 @@ github_username: jekyll
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-tailwind
+
+tailwind:
+  input: assets/css/app.css
+  minify: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -52,3 +57,8 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+collections:
+  films:
+    output: false
+  membres:
+    output: false
