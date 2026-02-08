@@ -1,7 +1,11 @@
+# backend:
+#   name: github
+#   repo: LsQnlt/n164-site
+#   branch: main
+
 backend:
-  name: github
-  repo: LsQnlt/n164-site
-  branch: main
+  name: proxy
+  proxy_url: http://localhost:8081/api/v1
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
@@ -49,4 +53,4 @@ collections:
           - { label: "Email", name: "email", widget: "string" }
           - { label: "Instagram", name: "instagram", widget: "string", required: false }
           - { label: "Facebook", name: "facebook", widget: "string", required: false }
-          - { label: "Vimeo", name: "vimeo", widget: "string", required: false }
+          - { label: "Soundcloud", name: "vimeo", widget: "string", required: false }
