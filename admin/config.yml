@@ -1,11 +1,7 @@
-# backend:
-#   name: github
-#   repo: LsQnlt/n164-site
-#   branch: main
-
 backend:
-  name: proxy
-  proxy_url: http://localhost:8081/api/v1
+  name: github
+  repo: LsQnlt/n164-site
+  branch: main
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
