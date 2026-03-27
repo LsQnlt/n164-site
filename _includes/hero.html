@@ -2,13 +2,24 @@
   class="min-h-screen flex flex-col justify-center items-center text-center relative bg-gradient-radial from-neutral-900 to-neutral-950"
   id="hero"
 >
-  <div>
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    class="absolute inset-0 w-full h-full object-cover z-0"
+  >
+    <source src="/assets/teaser_n164_compressed.webm" type="video/webm">
+    <source src="/assets/teaser_n164_compressed.mp4" type="video/mp4">
+  </video>
+
+  <div class="title">
     <h1 class="font-title text-7xl md:text-9xl font-extrabold tracking-wide mb-4">N164</h1>
     <p class="text-sm uppercase tracking-[0.3em] text-neutral-500">Fabrique d’histoires</p>
   </div>
   <a
     href="#films"
-    class="absolute bottom-8 z-10 flex flex-col items-center gap-2 text-xs uppercase tracking-widest text-neutral-500 animate-bounce no-underline"
+    class="absolute bottom-8 z-10 flex flex-col items-center gap-2 text-xs uppercase tracking-widest text-white animate-bounce no-underline"
   >
     <span>Découvrir</span>
     <svg
@@ -23,3 +34,16 @@
     </svg>
   </a>
 </section>
+<style>
+  #hero .title {
+    opacity: 0;
+    animation: fadeIn 4s ease forwards;
+    animation-delay: 6.5s; /* apparaît après 3 secondes */
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+</style>
