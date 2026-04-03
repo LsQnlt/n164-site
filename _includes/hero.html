@@ -36,14 +36,24 @@
 </section>
 <style>
   #hero .title {
-    opacity: 0;
-    animation: fadeIn 4s ease forwards;
-    animation-delay: 6.5s; /* apparaît après 3 secondes */
+    animation: titleCycle 73.93s ease infinite;
   }
 
-  @keyframes fadeIn {
-    to {
+  @keyframes titleCycle {
+    0% {
+      opacity: 0;
+    }
+    8.8% {
+      opacity: 0;
+    }
+    14.2% {
       opacity: 1;
+    }
+    94% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
     }
   }
 </style>
