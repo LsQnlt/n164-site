@@ -2,6 +2,42 @@
   <h2 class="font-display text-4xl md:text-5xl font-bold mb-16">Contact</h2>
 
   <div class="text-center">
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      class="max-w-lg mx-auto mb-24 flex flex-col gap-4"
+    >
+      <input type="hidden" name="form-name" value="contact">
+
+      <input
+        type="text"
+        name="name"
+        placeholder="Nom"
+        required
+        class="bg-transparent border border-neutral-800 px-4 py-3 text-sm focus:outline-none focus:border-neutral-400 transition-colors"
+      >
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+        class="bg-transparent border border-neutral-800 px-4 py-3 text-sm focus:outline-none focus:border-neutral-400 transition-colors"
+      >
+      <textarea
+        name="message"
+        placeholder="Message"
+        rows="5"
+        required
+        class="bg-transparent border border-neutral-800 px-4 py-3 text-sm focus:outline-none focus:border-neutral-400 transition-colors resize-none"
+      ></textarea>
+      <button
+        type="submit"
+        class="border border-neutral-800 px-6 py-3 text-sm uppercase tracking-widest hover:bg-neutral-100 hover:text-neutral-950 hover:border-neutral-100 transition-colors"
+      >
+        Envoyer
+      </button>
+    </form>
     {% if site.data.contact.email %}
       <a
         href="mailto:{{ site.data.contact.email }}"
