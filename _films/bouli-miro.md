@@ -3,18 +3,16 @@ title: Bouli Miro
 image: /assets/images/capture-d’écran-2025-12-15-à-14.41.59.png
 category: film-sur-mesure
 video_url: https://www.youtube.com/watch?v=IaJvt2Kqmi4&t=6s
+order: 1
 ---
 
-Spectacle Jeune Public 
-
+Spectacle Jeune Public
 
 BOULI
-MIRO de Fabrice Melquiot 
-
+MIRO de Fabrice Melquiot
 
 Bande-annonce
-réalisée par Jérémy Houadec 
-
+réalisée par Jérémy Houadec
 
 durée
 1 heure

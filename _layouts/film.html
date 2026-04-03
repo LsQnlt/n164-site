@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<article class="min-h-screen pt-24 px-6 pb-16 max-w-4xl mx-auto">
+  <a
+    href="/#films"
+    data-back
+    class="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-neutral-500 hover:text-neutral-100 transition-colors mb-12"
+  >
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path d="M19 12H5M12 5l-7 7 7 7"/>
+    </svg>
+    Nos films
+  </a>
+
+  <div
+    class="aspect-[5/3] w-full overflow-hidden mb-12"
+    style="view-transition-name: film-{{ page.slug }};"
+  >
+    <img
+      src="{{ page.image | relative_url }}"
+      alt="{{ page.title }}"
+      class="w-full h-full object-contain"
+    >
+  </div>
+
+  <h1 class="font-display text-4xl md:text-6xl font-bold mb-4">{{ page.title }}</h1>
+
+  {% if page.category %}
+    <p class="text-sm uppercase tracking-widest text-neutral-500 mb-8">{{ page.category }}</p>
+  {% endif %}
+
+  <div class="prose prose-invert prose-lg max-w-none text-neutral-400">
+    {{ content }}
+  </div>
+
+  {% if page.video_url %}
+    <div class="mt-12 aspect-video">
+      <iframe
+        src="{{ page.video_url }}"
+        class="w-full h-full"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  {% endif %}
+</article>
+<script>
+  const backLink = document.querySelector('a[data-back]');
+  if (backLink) {
+    backLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      history.back();
+    });
+  }
+</script>

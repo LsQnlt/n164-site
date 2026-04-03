@@ -2,7 +2,9 @@
 title: Le Local
 image: /assets/images/le-local.jpg
 category: atelier
+order: 13
 ---
+
 Atelier de
 création documentaire animé par le collectif N164 et l’espace
 jeunes d’Huelgoat, géré par l’association EPAL. Le thème

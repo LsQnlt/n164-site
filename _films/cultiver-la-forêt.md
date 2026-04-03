@@ -2,25 +2,13 @@
 title: Cultiver la forêt
 image: /assets/images/capture-d’écran-2025-12-16-à-20.38.03.png
 category: documentaire
+order: 6
 ---
-*Documentaire
-: 58mn – Jérémy Houadec*
 
-*Une production : Les 48° Rugissants*
+_Documentaire
+: 58mn – Jérémy Houadec_
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+_Une production : Les 48° Rugissants_
 
 **RÉSUMÉ :**
 
@@ -33,15 +21,13 @@ forestier d’une vingtaine d’hectares en Ille-et-Vilaine. Un
 engagement singulier, mais surtout collectif, prend forme pour
 cultiver la forêt.
 
-*En coproduction avec le groupement
-des chaînes locales de Bretagne : Tébéo, Tébésud, TVR.*
+_En coproduction avec le groupement
+des chaînes locales de Bretagne : Tébéo, Tébésud, TVR._
 
-*Avec le soutien de la Région Bretagne (développement et
-production), du CNC et de la Procirep-Angoa (développement).*
+_Avec le soutien de la Région Bretagne (développement et
+production), du CNC et de la Procirep-Angoa (développement)._
 
-
-
-*Sélections :*
+_Sélections :_
 
 Festival de Douarnenez 2025
 

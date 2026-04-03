@@ -25,34 +25,61 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Reveal animations */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s ease;
+/* Crossfade global — rapide */
+::view-transition-old(root) {
+  animation: fade-out 0.3s ease-in forwards;
+}
+::view-transition-new(root) {
+  animation: fade-in 0.5s ease-out 0.75s both; /* delay : après le shared element */
 }
 
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* Shared elements — lents, porteurs de sens */
+::view-transition-old(film-image),
+::view-transition-new(film-image) {
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.1, 1);
 }
 
-/* Délai progressif pour les grilles */
-.reveal-child {
-  opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
 }
 
-.reveal-child.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* Aller : nouvelle page entre par la droite */
+@keyframes slide-from-right {
+  from {
+    transform: translateX(100%);
+  }
+}
+@keyframes slide-to-left {
+  to {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
 }
 
-section[id] {
-  scroll-margin-top: 5rem;
+/* Retour : nouvelle page entre par la gauche */
+@keyframes slide-from-left {
+  from {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+}
+@keyframes slide-to-right {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+html[data-direction="back"]::view-transition-old(root) {
+  animation-name: slide-to-right;
+}
+html[data-direction="back"]::view-transition-new(root) {
+  animation-name: slide-from-left;
 }

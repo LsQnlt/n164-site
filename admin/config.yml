@@ -1,13 +1,13 @@
-backend:
-  name: github
-  repo: LsQnlt/n164-site
-  branch: main
+# backend:
+#   name: github
+#   repo: LsQnlt/n164-site
+#   branch: main
 
 # config for local proxy
-# backend:
-# name: proxy
-# proxy_url: http://localhost:8081/api/v1
-# then 'npx decap-server'
+backend:
+  name: proxy
+  proxy_url: http://localhost:8081/api/v1
+  # then 'npx decap-server'
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
@@ -18,6 +18,8 @@ collections:
     folder: "_films"
     create: true
     slug: "{{slug}}"
+    summary: "[{{order}}] {{title}}"
+    sortable_fields: ["order", "title"]
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
@@ -29,6 +31,7 @@ collections:
         }
       - { label: "Lien vidéo", name: "video_url", widget: "string", required: false }
       - { label: "Description", name: "body", widget: "markdown" }
+      - { label: "Ordre", name: "order", widget: "number", value_type: "int", default: 99 }
 
   - name: "membres"
     label: "Membres"
