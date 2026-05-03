@@ -1,6 +1,5 @@
 <section class="reveal px-6 py-24 md:py-32 bg-neutral-900" id="about">
   <div class="max-w-3xl mb-16">
-    <h2 class="font-display text-4xl md:text-5xl font-bold mb-8">À propos</h2>
     {% if site.data.about.intro %}
       <div class="text-lg leading-relaxed text-neutral-400">
         {{ site.data.about.intro | markdownify }}
@@ -22,10 +21,10 @@
           <img
             src="{{ membre.photo | relative_url }}"
             alt="{{ membre.title }}"
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.08] transition-transform duration-300"
           >
         </div>
-        <h3 class="font-display text-xl font-semibold mb-2 group-hover:text-neutral-300 transition-colors">
+        <h3 class="font-display text-xl mb-2 group-hover:text-neutral-300 transition-colors">
           {{ membre.title }}
         </h3>
       </a>

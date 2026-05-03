@@ -12,19 +12,19 @@
   <nav class="header__nav hidden md:flex gap-8 items-center">
     <a
       href="#films"
-      class="text-sm uppercase tracking-widest opacity-70 hover:opacity-100 transition-opacity"
+      class="text-sm uppercase tracking-widest opacity-70 hover:opacity-100 transition-opacity aria-[current=page]:opacity-100 aria-[current=page]:font-bold"
     >
       Nos films
     </a>
     <a
       href="#about"
-      class="text-sm uppercase tracking-widest opacity-70 hover:opacity-100 transition-opacity"
+      class="text-sm uppercase tracking-widest opacity-70 hover:opacity-100 transition-opacity aria-[current=page]:opacity-100 aria-[current=page]:font-bold"
     >
       À propos
     </a>
     <a
       href="#contact"
-      class="text-sm uppercase tracking-widest opacity-70 hover:opacity-100 transition-opacity"
+      class="text-sm uppercase tracking-widest opacity-70 hover:opacity-100 transition-opacity aria-[current=page]:opacity-100 aria-[current=page]:font-bold"
     >
       Contact
     </a>
@@ -32,7 +32,7 @@
       href="https://www.helloasso.com/associations/collectif-n164"
       target="_blank"
       rel="noopener"
-      class="text-sm uppercase tracking-widest flex items-center gap-2 text-rose-400 hover:text-rose-300 transition-colors"
+      class="text-sm uppercase tracking-widest flex items-center gap-2 text-rose-400 hover:text-rose-300 hover:font-bold transition-colors"
     >
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
@@ -47,16 +47,21 @@
   </button>
 </header>
 
-<!-- Mobile nav -->
 <nav class="header__nav-mobile fixed inset-0 bg-neutral-950 z-40 flex flex-col justify-center items-center gap-8 opacity-0 invisible transition-opacity duration-300 md:hidden">
-  <a href="#films" class="text-2xl uppercase tracking-widest">Nos films</a>
-  <a href="#about" class="text-2xl uppercase tracking-widest">À propos</a>
-  <a href="#contact" class="text-2xl uppercase tracking-widest">Contact</a>
+  <a href="#films" class="text-2xl uppercase tracking-widest aria-[current=page]:font-bold">
+    Nos films
+  </a>
+  <a href="#about" class="text-2xl uppercase tracking-widest aria-[current=page]:font-bold">
+    À propos
+  </a>
+  <a href="#contact" class="text-2xl uppercase tracking-widest aria-[current=page]:font-bold">
+    Contact
+  </a>
   <a
     href="https://www.helloasso.com/associations/collectif-n164"
     target="_blank"
     rel="noopener"
-    class="text-2xl uppercase tracking-widest flex items-center gap-3 text-rose-400"
+    class="text-2xl uppercase tracking-widest flex items-center gap-3 text-rose-400 hover:text-rose-300 hover:font-bold"
   >
     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>

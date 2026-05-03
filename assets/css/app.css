@@ -16,6 +16,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "MaPolicePrincipale";
+  src: url("../fonts/martian-grotesk-cnbd.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --font-title: "MaPoliceTitre", Arial, sans-serif;
   --font-main: "MaPolicePrincipale", Arial, sans-serif;
@@ -69,5 +77,11 @@
 }
 
 html {
-  background-color: rgb(10 10 10); /* neutral-950, ton fond "principal" */
+  scroll-behavior: smooth;
+  background-color: rgb(10 10 10);
+}
+
+.is-active {
+  font-weight: 700;
+  opacity: 1;
 }

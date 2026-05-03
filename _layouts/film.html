@@ -42,14 +42,64 @@ layout: default
   </div>
 
   {% if page.video_url %}
-    <div class="mt-12 aspect-video">
-      <iframe
-        src="{{ page.video_url }}"
-        class="w-full h-full"
-        frameborder="0"
-        allowfullscreen
-      ></iframe>
-    </div>
+    {% assign video_url = page.video_url %}
+    {% assign embed_url = null %}
+    {% assign is_embeddable = false %}
+
+    {% if video_url contains 'youtube.com/watch' %}
+      {% assign video_id = video_url | split: 'v=' | last | split: '&' | first %}
+      {% assign embed_url = 'https://www.youtube.com/embed/' | append: video_id %}
+      {% assign is_embeddable = true %}
+    {% elsif video_url contains 'youtu.be/' %}
+      {% assign video_id = video_url | split: 'youtu.be/' | last | split: '?' | first %}
+      {% assign embed_url = 'https://www.youtube.com/embed/' | append: video_id %}
+      {% assign is_embeddable = true %}
+    {% elsif video_url contains 'vimeo.com/' %}
+      {% assign video_id = video_url | split: 'vimeo.com/' | last | split: '?' | first %}
+      {% assign embed_url = 'https://player.vimeo.com/video/' | append: video_id %}
+      {% assign is_embeddable = true %}
+    {% elsif video_url contains 'soundcloud.com' %}
+      {% assign embed_url = 'https://w.soundcloud.com/player/?url='
+        | append: video_url
+        | append: '&color=%23ff5500'
+      %}
+      {% assign is_embeddable = true %}
+    {% endif %}
+
+    {% if is_embeddable %}
+      <div class="mt-12 {% if video_url contains 'soundcloud' %}h-40{% else %}aspect-video{% endif %}">
+        <iframe
+          src="{{ embed_url }}"
+          class="w-full h-full"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    {% else %}
+      <a
+        href="{{ video_url }}"
+        target="_blank"
+        rel="noopener"
+        class="
+          mt-12 inline-flex items-center
+          gap-3 border-neutral-800 px-6 py-4 text-sm uppercase tracking-widest
+          hover:bg-neutral-100 hover:text-neutral-950 hover:border-neutral-100 transition-colors
+        "
+      >
+        Voir le film
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M7 17L17 7M7 7h10v10"/>
+        </svg>
+      </a>
+    {% endif %}
   {% endif %}
 </article>
 <script>
