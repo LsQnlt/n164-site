@@ -20,7 +20,7 @@
       crossorigin
     >
   </head>
-  <body class="font-main bg-neutral-950 text-neutral-100 overflow-x-hidden">
+  <body class="font-main bg-neutral-950 text-neutral-100 page-{{ page.layout | default: 'home' }}">
     {% include header.html %}
 
     <main>
@@ -56,17 +56,3 @@
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
   </body>
 </html>
-<style>
-  body {
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-  body.fonts-loaded {
-    opacity: 1;
-  }
-</style>
-<script>
-  document.fonts.ready.then(() => {
-    document.body.classList.add('fonts-loaded');
-  });
-</script>

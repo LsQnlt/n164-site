@@ -22,12 +22,12 @@ layout: default
 
   <div
     class="aspect-[5/3] w-full overflow-hidden mb-12"
-    style="view-transition-name: film-{{ page.slug }};"
   >
     <img
       src="{{ page.image | relative_url }}"
       alt="{{ page.title }}"
-      class="w-full h-full object-contain"
+      class="w-full h-full object-cover"
+      style="view-transition-name: film-{{ page.slug }};"
     >
   </div>
 
@@ -53,11 +53,10 @@ layout: default
   {% endif %}
 </article>
 <script>
-  const backLink = document.querySelector('a[data-back]');
-  if (backLink) {
-    backLink.addEventListener('click', (e) => {
+  document.querySelector('a[data-back]')?.addEventListener('click', (e) => {
+    if (window.history.length > 1) {
       e.preventDefault();
-      history.back();
-    });
-  }
+      window.history.back();
+    }
+  });
 </script>

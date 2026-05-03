@@ -57,3 +57,9 @@
     }
   }
 </style>
+<script>
+  document.querySelector('#hero a[href="#films"]')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('#films')?.scrollIntoView({ behavior: 'smooth' });
+  });
+</script>

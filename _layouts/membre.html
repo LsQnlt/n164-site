@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="min-h-screen pt-24 px-6 pb-16 max-w-2xl mx-auto text-center">
+<article class="min-h-screen pt-24 px-6 pb-16 max-w-5xl mx-auto">
   <a
     href="/#about"
     data-back
@@ -20,29 +20,32 @@ layout: default
     À propos
   </a>
 
-  <div
-    class="w-80 h-80 mx-auto mb-8 overflow-hidden border-2 border-neutral-800"
-    style="view-transition-name: membre-{{ page.slug }};"
-  >
-    <img
-      src="{{ page.photo | relative_url }}"
-      alt="{{ page.title }}"
-      class="w-full h-full object-cover"
+  <div class="grid md:grid-cols-2 gap-12 items-start">
+    <div
+      class="w-full aspect-square overflow-hidden border-2 border-neutral-800"
+      style="view-transition-name: membre-{{ page.slug }};"
     >
-  </div>
+      <img
+        src="{{ page.photo | relative_url }}"
+        alt="{{ page.title }}"
+        class="w-full h-full object-cover"
+      >
+    </div>
 
-  <h1 class="font-display text-4xl md:text-5xl font-bold mb-8">{{ page.title }}</h1>
+    <div>
+      <h1 class="font-display text-4xl md:text-5xl font-bold mb-8">{{ page.title }}</h1>
 
-  <div class="prose prose-invert prose-lg max-w-none text-neutral-400 text-left">
-    {{ content }}
+      <div class="prose prose-invert prose-lg max-w-none text-neutral-400">
+        {{ content }}
+      </div>
+    </div>
   </div>
 </article>
 <script>
-  const backLink = document.querySelector('a[data-back]');
-  if (backLink) {
-    backLink.addEventListener('click', (e) => {
+  document.querySelector('a[data-back]')?.addEventListener('click', (e) => {
+    if (window.history.length > 1) {
       e.preventDefault();
-      history.back();
-    });
-  }
+      window.history.back();
+    }
+  });
 </script>

@@ -1,12 +1,15 @@
-<header class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 py-4 bg-linear-to-b from-neutral-950/95 to-transparent backdrop-blur-sm">
-  <a href="{{ page.url == '/' | ternary: '#', '/' }}">
+<header
+  class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 py-4 bg-linear-to-b from-neutral-950/95 to-transparent backdrop-blur-sm"
+  style="view-transition-name: site-header;"
+>
+  <a href="{% if page.url == '/' %}#{% else %}/{% endif %}">
     <img
       src="{{ '/assets/images/logo_site_blanc_fondtransparent.png' | relative_url }}"
       alt="N164"
       class="w-34"
     >
   </a>
-  <nav class="header__nav hidden md:flex gap-8">
+  <nav class="header__nav hidden md:flex gap-8 items-center">
     <a
       href="#films"
       class="text-sm uppercase tracking-widest opacity-70 hover:opacity-100 transition-opacity"
@@ -25,6 +28,17 @@
     >
       Contact
     </a>
+    <a
+      href="https://www.helloasso.com/associations/collectif-n164"
+      target="_blank"
+      rel="noopener"
+      class="text-sm uppercase tracking-widest flex items-center gap-2 text-rose-400 hover:text-rose-300 transition-colors"
+    >
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </svg>
+      Soutenir
+    </a>
   </nav>
   <button class="header__menu-toggle md:hidden flex flex-col gap-1 p-2">
     <span class="w-6 h-0.5 bg-neutral-100"></span>
@@ -38,4 +52,15 @@
   <a href="#films" class="text-2xl uppercase tracking-widest">Nos films</a>
   <a href="#about" class="text-2xl uppercase tracking-widest">À propos</a>
   <a href="#contact" class="text-2xl uppercase tracking-widest">Contact</a>
+  <a
+    href="https://www.helloasso.com/associations/collectif-n164"
+    target="_blank"
+    rel="noopener"
+    class="text-2xl uppercase tracking-widest flex items-center gap-3 text-rose-400"
+  >
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </svg>
+    Soutenir
+  </a>
 </nav>

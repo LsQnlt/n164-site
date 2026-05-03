@@ -21,22 +21,39 @@
   --font-main: "MaPolicePrincipale", Arial, sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
+@view-transition {
+  navigation: auto;
 }
 
-/* Crossfade global — rapide */
+/* === Par défaut sur tous les noms : pas de crossfade fantôme === */
+::view-transition-old(*) {
+  animation: none;
+  opacity: 0;
+}
+::view-transition-new(*) {
+  animation: none;
+  opacity: 1;
+  mix-blend-mode: normal;
+}
+
+/* === Override explicite pour root : crossfade global === */
 ::view-transition-old(root) {
-  animation: fade-out 0.3s ease-in forwards;
+  animation: 300ms ease-in both fade-out;
+  opacity: 1;
 }
 ::view-transition-new(root) {
-  animation: fade-in 0.5s ease-out 0.75s both; /* delay : après le shared element */
+  animation: 300ms ease-out 100ms both fade-in;
+  opacity: 0;
 }
 
-/* Shared elements — lents, porteurs de sens */
-::view-transition-old(film-image),
-::view-transition-new(film-image) {
-  animation-duration: 0.6s;
+/* === Override pour la navbar : on la laisse statique === */
+::view-transition-group(site-header) {
+  animation: none;
+}
+
+/* === Durée du morph sur les groups === */
+::view-transition-group(*) {
+  animation-duration: 600ms;
   animation-timing-function: cubic-bezier(0.25, 0.1, 0.1, 1);
 }
 
@@ -51,35 +68,6 @@ html {
   }
 }
 
-/* Aller : nouvelle page entre par la droite */
-@keyframes slide-from-right {
-  from {
-    transform: translateX(100%);
-  }
-}
-@keyframes slide-to-left {
-  to {
-    transform: translateX(-30%);
-    opacity: 0;
-  }
-}
-
-/* Retour : nouvelle page entre par la gauche */
-@keyframes slide-from-left {
-  from {
-    transform: translateX(-30%);
-    opacity: 0;
-  }
-}
-@keyframes slide-to-right {
-  to {
-    transform: translateX(100%);
-  }
-}
-
-html[data-direction="back"]::view-transition-old(root) {
-  animation-name: slide-to-right;
-}
-html[data-direction="back"]::view-transition-new(root) {
-  animation-name: slide-from-left;
+html {
+  background-color: rgb(10 10 10); /* neutral-950, ton fond "principal" */
 }
