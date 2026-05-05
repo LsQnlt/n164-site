@@ -1,6 +1,6 @@
 ---
 title: Imagine demain on gagne
-image: /assets/images/vlcsnap-2020-03-02-16h15m56s323.png
+image: /assets/images/vlcsnap-2020-03-02-16h15m56s323.webp
 category: documentaire
 order: 9
 ---

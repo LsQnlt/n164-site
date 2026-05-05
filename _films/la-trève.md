@@ -1,6 +1,6 @@
 ---
 title: La Trève
-image: /assets/images/la-trève-captures-2021-5.jpeg
+image: /assets/images/la-trève-captures-2021-5.webp
 category: expo
 video_url: https://www.youtube.com/watch?v=qGp58uXflHg&list=PL9JXRQnXnLWS0ftADkYHvUTffYZ_w8yJx
 order: 10

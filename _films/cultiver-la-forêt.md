@@ -1,6 +1,6 @@
 ---
 title: Cultiver la forêt
-image: /assets/images/capture-d’écran-2025-12-16-à-20.38.03.png
+image: /assets/images/capture-d’écran-2025-12-16-à-20.38.03.webp
 category: documentaire
 order: 6
 ---

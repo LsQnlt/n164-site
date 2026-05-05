@@ -1,6 +1,6 @@
 ---
 title: Lost Souls
-image: /assets/images/lost-souls-passerelle.jpg
+image: /assets/images/lost-souls-passerelle.webp
 category: atelier
 video_url: https://antipode-rennes.fr/magazine/lost-souls-un-court-metrage-realise-par-les-jeunes-de-la-passerelle
 order: 15

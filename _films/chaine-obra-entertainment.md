@@ -1,6 +1,6 @@
 ---
 title: Chaine Obra entertainment
-image: /assets/images/capture-d-écran-2025-12-16-114350.png
+image: /assets/images/capture-d-écran-2025-12-16-114350.webp
 category: atelier
 order: 2
 ---

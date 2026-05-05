@@ -1,6 +1,6 @@
 ---
 title: Le Gimmik manège
-image: /assets/images/photogramme_gimmik_sanstitre.jpg
+image: /assets/images/photogramme_gimmik_sanstitre.webp
 category: film-sur-mesure
 order: 12
 ---

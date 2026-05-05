@@ -1,6 +1,6 @@
 ---
 title: Arthur
-photo: /assets/images/dsc02895_light.jpg
+photo: /assets/images/dsc02895_light.webp
 ---
 
 Lorientais installé à Nantes, brittophone, Arthur Thouvenin est

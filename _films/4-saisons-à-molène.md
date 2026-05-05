@@ -1,6 +1,6 @@
 ---
 title: 4 saisons à Molène
-image: /assets/images/img_20250730_112334.jpg
+image: /assets/images/img_20250730_112334.webp
 category: podcast
 video_url: https://soundcloud.com/collectifn164/4-saisons-a-molene
 order: 4

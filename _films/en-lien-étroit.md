@@ -1,6 +1,6 @@
 ---
 title: En lien étroit
-image: /assets/images/vlcsnap-2023-05-26-12h50m43s457.jpg
+image: /assets/images/vlcsnap-2023-05-26-12h50m43s457.webp
 category: documentaire
 order: 7
 ---

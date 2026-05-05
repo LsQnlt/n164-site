@@ -1,6 +1,6 @@
 ---
 title: Gwendal
-photo: /assets/images/img_20250813_205223.jpg
+photo: /assets/images/img_20250813_205223.webp
 ---
 
 [Gwendal

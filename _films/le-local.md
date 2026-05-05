@@ -1,6 +1,6 @@
 ---
 title: Le Local
-image: /assets/images/le-local.jpg
+image: /assets/images/le-local.webp
 category: atelier
 order: 13
 ---

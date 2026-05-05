@@ -1,6 +1,6 @@
 ---
 title: Franz
-photo: /assets/images/photo-temporaire.jpg
+photo: /assets/images/photo-temporaire.webp
 ---
 François
 est réalisateur, cadreur et photographe depuis plus de dix ans.

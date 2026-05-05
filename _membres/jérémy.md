@@ -1,6 +1,6 @@
 ---
 title: Jérémy
-photo: /assets/images/3c280999-902d-467a-a204-ef9c1394ea63.jpeg
+photo: /assets/images/3c280999-902d-467a-a204-ef9c1394ea63.webp
 ---
 
 Installé depuis 20 ans à Rennes, diplomé d'une maitrise de cinéma,

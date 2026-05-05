@@ -1,6 +1,6 @@
 ---
 title: Le Chant de Brest
-image: /assets/images/affiche-.jpg
+image: /assets/images/affiche-.webp
 category: documentaire
 video_url: https://vimeo.com/869078223
 order: 11

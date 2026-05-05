@@ -1,6 +1,6 @@
 ---
 title: Identité brestoises
-image: /assets/images/capture-d-écran-2025-12-05-120825.png
+image: /assets/images/capture-d-écran-2025-12-05-120825.webp
 category: atelier
 order: 8
 ---

@@ -1,6 +1,6 @@
 ---
 title: _Singulier(s)_
-image: /assets/images/capture-d’écran-2025-12-15-à-14.43.26.png
+image: /assets/images/capture-d’écran-2025-12-15-à-14.43.26.webp
 category: atelier
 video_url: https://www.youtube.com/watch?v=ElceoArg87o
 order: 16

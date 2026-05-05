@@ -1,6 +1,6 @@
 ---
 title: Les promesses du matin
-image: /assets/images/pdm-01.jpg
+image: /assets/images/pdm-01.webp
 category: film-sur-mesure
 video_url: https://www.youtube.com/watch?v=SZ3dPWGhVRA
 order: 14
