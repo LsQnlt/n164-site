@@ -13,9 +13,9 @@
     <source src="/assets/teaser_n164_compressed.mp4" type="video/mp4">
   </video>
 
-  <div class="title">
+  <div class="title opacity-0">
     <h1 class="font-title text-7xl md:text-9xl font-extrabold tracking-wide mb-4">N164</h1>
-    <p class="text-sm uppercase tracking-[0.3em] text-neutral-500">Fabrique d’histoires</p>
+    <p class="text-sm uppercase tracking-[0.3em] text-neutral-500">Fabrique d'histoires</p>
   </div>
   <a
     href="#films"
@@ -35,31 +35,48 @@
   </a>
 </section>
 <style>
-  #hero .title {
-    animation: titleCycle 73.93s ease infinite;
+  #hero video {
+    view-transition-name: none;
   }
-
-  @keyframes titleCycle {
-    0% {
-      opacity: 0;
-    }
-    8.8% {
-      opacity: 0;
-    }
-    14.2% {
-      opacity: 1;
-    }
-    94% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
+  #hero .title {
+    transition: opacity 0.1s linear;
+    position: relative;
+    z-index: 10;
   }
 </style>
 <script>
   document.querySelector('#hero a[href="#films"]')?.addEventListener('click', (e) => {
     e.preventDefault();
     document.querySelector('#films')?.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  const heroVideo = document.querySelector('#hero video');
+  const heroTitle = document.querySelector('#hero .title');
+
+  function syncTitle() {
+    if (!heroVideo?.duration) return;
+    const t = heroVideo.currentTime;
+    const d = heroVideo.duration;
+
+    let opacity;
+    if (t < 6.5) opacity = 0;
+    else if (t < 10.5) opacity = (t - 6.5) / 4;
+    else if (t < d - 2) opacity = 1;
+    else opacity = Math.max(0, 1 - (t - (d - 2)) / 2);
+
+    heroTitle.style.opacity = opacity;
+  }
+
+  heroVideo?.addEventListener('timeupdate', syncTitle);
+
+  function restartHero() {
+    if (heroVideo) {
+      heroVideo.load();
+      heroVideo.play().catch(() => {});
+    }
+  }
+
+  window.addEventListener('pageshow', (e) => {
+    if (e.persisted) restartHero();
   });
 </script>
