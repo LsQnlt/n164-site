@@ -1,13 +1,13 @@
-# backend:
-#   name: github
-#   repo: LsQnlt/n164-site
-#   branch: main
+backend:
+  name: github
+  repo: LsQnlt/n164-site
+  branch: main
 
 # config for local proxy
-backend:
-  name: proxy
-  proxy_url: http://localhost:8081/api/v1
-  # then 'npx decap-server'
+# backend:
+#   name: proxy
+#   proxy_url: http://localhost:8081/api/v1
+#   # then 'npx decap-server'
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
