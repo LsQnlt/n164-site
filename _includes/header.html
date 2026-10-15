@@ -1,3 +1,4 @@
+{% assign home = "" %}{% unless page.url == "/" %}{% assign home = "/" %}{% endunless %}
 <header
   class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 py-4 bg-linear-to-b from-neutral-950/95 to-transparent backdrop-blur-sm"
   style="view-transition-name: site-header;"
@@ -11,19 +12,19 @@
   </a>
   <nav class="header__nav hidden md:flex gap-8 items-center">
     <a
-      href="#films"
+      href="{{ home }}#films"
       class="text-sm uppercase tracking-widest opacity-70 hover:opacity-100 transition-opacity aria-[current=page]:opacity-100 aria-[current=page]:font-bold"
     >
       Nos films
     </a>
     <a
-      href="#about"
+      href="{{ home }}#about"
       class="text-sm uppercase tracking-widest opacity-70 hover:opacity-100 transition-opacity aria-[current=page]:opacity-100 aria-[current=page]:font-bold"
     >
       À propos
     </a>
     <a
-      href="#contact"
+      href="{{ home }}#contact"
       class="text-sm uppercase tracking-widest opacity-70 hover:opacity-100 transition-opacity aria-[current=page]:opacity-100 aria-[current=page]:font-bold"
     >
       Contact
@@ -48,13 +49,13 @@
 </header>
 
 <nav class="header__nav-mobile fixed inset-0 bg-neutral-950 z-40 flex flex-col justify-center items-center gap-8 opacity-0 invisible transition-opacity duration-300 md:hidden">
-  <a href="#films" class="text-2xl uppercase tracking-widest aria-[current=page]:font-bold">
+  <a href="{{ home }}#films" class="text-2xl uppercase tracking-widest aria-[current=page]:font-bold">
     Nos films
   </a>
-  <a href="#about" class="text-2xl uppercase tracking-widest aria-[current=page]:font-bold">
+  <a href="{{ home }}#about" class="text-2xl uppercase tracking-widest aria-[current=page]:font-bold">
     À propos
   </a>
-  <a href="#contact" class="text-2xl uppercase tracking-widest aria-[current=page]:font-bold">
+  <a href="{{ home }}#contact" class="text-2xl uppercase tracking-widest aria-[current=page]:font-bold">
     Contact
   </a>
   <a
